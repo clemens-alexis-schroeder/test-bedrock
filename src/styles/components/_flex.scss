@@ -1,0 +1,38 @@
+.block--video {
+    .video--overlay {
+        position: relative;
+        display: block;
+        overflow: hidden;
+
+        img {
+            transition: all 0.3s!important;
+            transform: scale(1);
+        }
+
+        &::after {
+            content: '';
+            mask: url('data:image/svg+xml; utf8, <svg width="107px" height="107px" viewBox="0 0 107 107" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Group" fill="rgb(19,37,149)" fill-rule="nonzero"><path d="M71.0212,52.9651 C71.69,53.3664 71.8238,54.1687 71.4225,54.8375 C71.2888,54.9712 71.155,55.1051 71.0212,55.2388 L45.475,70.8875 C44.8062,71.2887 44.0037,71.0212 43.6025,70.4862 C43.4688,70.2187 43.4688,70.0849 43.4688,69.8174 L43.4688,38.5201 C43.4688,37.7176 44.0037,37.1826 44.8062,37.1826 C45.0738,37.1826 45.3412,37.3161 45.475,37.3161 L71.0212,52.9651 Z M53.5,107 C83.0472,107 107,83.0472 107,53.5 C107,23.9528 83.0472,0 53.5,0 C23.9528,0 0,23.9528 0,53.5 C0,83.0472 23.9528,107 53.5,107 Z" id="Path-2"></path></g></g></svg>') no-repeat 50% 50%;
+            mask-size: contain;
+            mask-position: right;
+            @apply bg-primary;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s;
+            @apply w-20 h-20;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+                transition: all 0.3s;
+            }
+
+            &::after {
+                transition: all 0.3s;
+                @apply bg-dark;
+            }
+        }
+    }
+}

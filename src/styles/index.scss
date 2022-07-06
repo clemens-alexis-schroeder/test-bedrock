@@ -1,0 +1,28 @@
+html {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+//disable css transition on page load
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+//admin bar styling
+body.admin-bar {
+    @media screen and (max-width: 782px) {
+        padding-top: 0!important;
+        #wpadminbar {
+            display: none!important;
+        }
+    }
+    padding-top: 32px;
+    #wpadminbar {
+        position: fixed!important;
+    }
+}

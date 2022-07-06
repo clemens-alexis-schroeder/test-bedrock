@@ -1,0 +1,45 @@
+img.Sirv:not(.relative) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+img.Sirv.image-fill,
+img.Sirv.image-fit {
+    width: 100%;
+    height: 100%;
+}
+
+img.Sirv.image-fit {
+    object-fit: contain;
+}
+
+img.Sirv.image-fill {
+    object-fit: cover;
+}
+
+//sirv fix
+img.Sirv:not([src]),
+img.Sirv.sirv-image-loading:not([src]) {
+    opacity: 0;
+}
+
+/*Für img grösse*/
+.image--sirv {
+    width: 100%;
+    position: relative;
+}
+
+.sirv--card:after {
+    display: block;
+    content: "";
+    padding-top: 67%;
+}
+
+
+//setup for sirv images
+// <div class="image--sirv sirv--card">
+//   <img data-src="<?= $bild['url']; ?>" alt="<?= $bild['title']; ?>" class="Sirv image-fill" data-options="fit:crop"/>
+// </div>

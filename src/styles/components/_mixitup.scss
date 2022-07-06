@@ -1,0 +1,10 @@
+.post-filter {
+    .post-button {
+        @apply hover:text-primary bg-light px-4 rounded;
+        cursor: pointer;
+
+        &.mixitup-control-active {
+            @apply text-primary;
+        }
+    }
+}
